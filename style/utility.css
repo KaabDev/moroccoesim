@@ -1,0 +1,84 @@
+/* button utilities */
+.theme-btn-primary {
+    background: linear-gradient(180deg,
+            rgba(31, 145, 227, 0.55) 0%,
+            rgba(31, 145, 227, 1) 50%,
+            rgba(24, 114, 180, 1) 100%);
+    background-size: 100% 200%;
+    background-position: center bottom;
+    transition: background-position 0.3s ease;
+}
+
+.theme-btn-primary:hover {
+    background-position: center top;
+}
+
+/* text utilites */
+.text-gray {
+    color: #2A2A2A;
+}
+
+.text-light-gray {
+    color: #33333380;
+}
+
+.heading-1 {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    font-size: 3.75rem;
+    line-height: 70px;
+    line-height: 4.375rem;
+    letter-spacing: 0;
+}
+
+.heading-2 {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 54px;
+    font-size: 3.375rem;
+    line-height: 64px;
+    line-height: 4rem;
+    letter-spacing: 0;
+}
+
+.body-text-1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+/* layout utilities */
+.bg-light-blue {
+    background-color: #22A0FC;
+}
+
+.bg-light-blue-1 {
+    background-color: #D3ECFE;
+}
+
+.bg-blue {
+    background-color: #1B81CA;
+}
+
+.bg-linearg-blue {
+    background: linear-gradient(90deg, #1F91E4 0%, #1A7CC3 100%);
+}
+
+/* style utilities */
+.rounded-30 {
+    border-radius: 30px;
+}
+
+.border-blue {
+    border: 1px solid #22A0FC
+}
+
+.box-shadow-gray {
+    box-shadow: 0px 0px 4px 0px #00000040;
+}
+
+/* base utilites */
+.mx-w-1011 {
+    max-width: 1011px;
+}

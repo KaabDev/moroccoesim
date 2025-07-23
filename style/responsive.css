@@ -1,0 +1,85 @@
+@media (max-width: 767.98px) {
+    html {
+        font-size: 87.5%;
+        /* 14px */
+    }
+
+    .rounded-30 {
+        border-radius: 20px;
+    }
+
+    .faq-section .toggle-btn {
+        height: 32.5px;
+        width: 32.5px;
+    }
+
+    .faq-section .toggle-btn img {
+        width: 17.5x;
+    }
+
+    .client {
+        width: 90px;
+    }
+
+    .client {
+        width: 90px;
+    }
+
+    .icon-quote {
+        width: 70px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .plans-slider-track>* {
+        width: 276px;
+    }
+
+    .talk-about-section .swap-slider-track>* {
+        width: 310px;
+        width: 280px;
+    }
+
+    .hero-section .tag-location {
+        left: -0%;
+    }
+}
+
+@media (max-width: 430px) {
+    .benifits img {
+        min-width: 60px;
+    }
+
+    .tag-location img {
+        width: 11px;
+    }
+
+    .tag-play img {
+        width: 15px;
+    }
+
+    .tag-location h5,
+    .tag-play h5 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .heading-2 .long-word {
+        font-size: 2.4rem;
+    }
+
+    .heading-1 {
+        font-size: 3.1rem;
+        line-height: 4rem;
+    }
+
+    .hero-section .heading-1 img {
+        width: 37px;
+    }
+
+    .heading-2 {
+        font-size: 2.8rem;
+        line-height: 3.5rem;
+    }
+}

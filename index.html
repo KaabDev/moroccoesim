@@ -10,6 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/utility.css">
@@ -19,60 +21,83 @@
 <body>
 
     <!-- header + navbar -->
-    <header id="header" class="static-header">
+    <header>
         <nav class="navbar navbar-expand-lg py-4">
             <div class="container justify-content-between">
 
                 <!-- Brand -->
                 <a class="navbar-brand" href="#">
-                    <img src="assets/logo.png" alt="logo">
+                    <h2 class="navbar-brand mb-0 h1 fs-2 fw-bold text-gray">Logo Here</h2>
                 </a>
 
                 <!-- Burger Button for Mobile -->
-                <button class="navbar-toggler d-lg-none border border-white px-2 ms-auto me-3 py-2 px-3" type="button"
-                    data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvasMenu">
-                    <span>
-                        <img src="assets/icon-white-nav-burger.png" alt="menu" width="20">
-                    </span>
-                    <!-- <span class="navbar-toggler-icon"></span> -->
+                <button class="navbar-toggler d-lg-none ms-auto" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvas" aria-controls="offcanvasMenu">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- Desktop Navigation -->
                 <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center flex-grow-0">
-                    <ul class="navbar-nav mb-2 mb-lg-0 gap-4">
+                    <ul class="navbar-nav gap-1 position-relative" id="main-nav">
                         <li class="nav-item">
                             <a class="nav-link active" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Services
+                                Esim Plans
                             </a>
-                            <ul class="dropdown-menu bg-dark" data-bs-theme="dark">
-                                <li><a class="dropdown-item text-white" href="#">Residential Demolition</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Emergency Demolition</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Pool Demolition</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Garage Demolition</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Mobile Home Demolition</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Land Clearing</a></li>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Tourist eSIM - 7 Days</a></li>
+                                <li><a class="dropdown-item" href="#">Traveler eSIM - 15 Days</a></li>
+                                <li><a class="dropdown-item" href="#">Long Stay eSIM - 30 Days</a></li>
+                                <li><a class="dropdown-item" href="#">Unlimited Data eSIM</a></li>
+                                <li><a class="dropdown-item" href="#">eSIM for Europe & Morocco</a></li>
+                                <li><a class="dropdown-item" href="#">Regional eSIM (North Africa)</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Get Started
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">How eSIM Works</a></li>
+                                <li><a class="dropdown-item" href="#">Check Device Compatibility</a></li>
+                                <li><a class="dropdown-item" href="#">Scan QR Code</a></li>
+                                <li><a class="dropdown-item" href="#">Activate Your Plan</a></li>
+                                <li><a class="dropdown-item" href="#">FAQs</a></li>
+                                <li><a class="dropdown-item" href="#">Download Setup Guide</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                About Us
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Our Mission</a></li>
+                                <li><a class="dropdown-item" href="#">Why Choose Us</a></li>
+                                <li><a class="dropdown-item" href="#">Meet the Team</a></li>
+                                <li><a class="dropdown-item" href="#">Customer Reviews</a></li>
+                                <li><a class="dropdown-item" href="#">Press & Media</a></li>
+                                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                            </ul>
                         </li>
+
+                        <!-- <span class="underline"></span> -->
+                        <div class="underline active-line"></div>
+                        <div class="underline hover-line"></div>
                     </ul>
                 </div>
 
-                <a href="#" class="btn btn-orange py-2 px-4 rounded-1 fw-semibold text-white d-none d-sm-block">
-                    <div class="py-1">Get a Free Estimate</div>
-                </a>
+                <div class="d-none d-md-flex align-items-center gap-xl-3">
+                    <a class="nav-link mx-4" href="#">Log In</a>
 
+                    <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                        <div class="py-1 body-text-1">Sign Up</div>
+                    </a>
+                </div>
             </div>
         </nav>
     </header>
@@ -82,7 +107,7 @@
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasMenuLabel">
                 <a class="navbar-brand" href="#">
-                    <img src="assets/logo.png" alt="logo">
+                    <h2 class="navbar-brand mb-0 h1 fs-2 fw-bold text-gray">Logo Here</h2>
                 </a>
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -92,40 +117,1273 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Esim Plans
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Tourist eSIM - 7 Days</a></li>
+                        <li><a class="dropdown-item" href="#">Traveler eSIM - 15 Days</a></li>
+                        <li><a class="dropdown-item" href="#">Long Stay eSIM - 30 Days</a></li>
+                        <li><a class="dropdown-item" href="#">Unlimited Data eSIM</a></li>
+                        <li><a class="dropdown-item" href="#">eSIM for Europe & Morocco</a></li>
+                        <li><a class="dropdown-item" href="#">Regional eSIM (North Africa)</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Services
+                        Get Started
                     </a>
-                    <ul class="dropdown-menu bg-dark" data-bs-theme="dark">
-                        <li><a class="dropdown-item text-white" href="#">Residential Demolition</a></li>
-                        <li><a class="dropdown-item text-white" href="#">Emergency Demolition</a></li>
-                        <li><a class="dropdown-item text-white" href="#">Pool Demolition</a></li>
-                        <li><a class="dropdown-item text-white" href="#">Garage Demolition</a></li>
-                        <li><a class="dropdown-item text-white" href="#">Mobile Home Demolition</a></li>
-                        <li><a class="dropdown-item text-white" href="#">Land Clearing</a></li>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">How eSIM Works</a></li>
+                        <li><a class="dropdown-item" href="#">Check Device Compatibility</a></li>
+                        <li><a class="dropdown-item" href="#">Scan QR Code</a></li>
+                        <li><a class="dropdown-item" href="#">Activate Your Plan</a></li>
+                        <li><a class="dropdown-item" href="#">FAQs</a></li>
+                        <li><a class="dropdown-item" href="#">Download Setup Guide</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        About Us
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Our Mission</a></li>
+                        <li><a class="dropdown-item" href="#">Why Choose Us</a></li>
+                        <li><a class="dropdown-item" href="#">Meet the Team</a></li>
+                        <li><a class="dropdown-item" href="#">Customer Reviews</a></li>
+                        <li><a class="dropdown-item" href="#">Press & Media</a></li>
+                        <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                    </ul>
                 </li>
             </ul>
-            <a href="#" class="btn btn-orange py-2 px-4 rounded-1 fw-semibold text-white d-sm-none">
-                <div class="py-1">Get a Free Estimate</div>
-            </a>
+            <div class="d-flex d-md-none align-items-center justify-content-between flex-wrap">
+                <a class="nav-link p-2" href="#">Log In</a>
+
+                <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                    <div class="py-1">Sign Up</div>
+                </a>
+            </div>
         </div>
     </div>
+
+    <!-- hero section -->
+    <section class="hero-section container py-5 py-lg-4">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-5">
+                <div class="row gy-3">
+                    <div>
+                        <div class="bg-light-blue d-inline-flex align-items-center gap-2 rounded-pill p-2 text-white">
+                            <h5 class="fw-medium mb-0">Explore Your Life</h5>
+                            <img src="assets/icon-world.png" alt="world">
+                        </div>
+                    </div>
+                    <h1 class="heading-1 mb-0">
+                        Morocco Esim For Tourists
+                        <img src="assets/icon-blue-inclicne-plane.png" alt="Aeroplane">
+                    </h1>
+                    <p class="body-text-1">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s
+                    </p>
+                </div>
+                <img class="position-absolute start-0" src="assets/icon-blue-dashpath-plane.png"
+                    alt="Wavey flign Aeroplane">
+            </div>
+            <div class="col-md-10 col-lg-7 position-relative">
+                <img class="w-100" src="assets/hero-sec-img.png" alt="Morocco Esims">
+
+                <!-- <div class="tag-location d-flex bg-white p-2 px-3 rounded-pill">
+                    <div class="d-inline-flex align-items-center gap-2 px-1">
+                        <img src="assets/icon-blue-outline-location-pin.png" alt="Location pin">
+                        <h5 class="fw-medium mb-0">Lorem Ipsum</h5>
+                    </div>
+                </div>
+
+                <div class="tag-play d-flex bg-white p-2 px-3 rounded-pill">
+                    <div class="d-inline-flex align-items-center gap-2 px-1">
+                        <img src="assets/icon-oranange-circle-play.png" alt="Play">
+                        <h5 class="fw-medium mb-0">Play Demo</h5>
+                    </div>
+                </div> -->
+
+                <a href="#"
+                    class="tag-location d-flex bg-white p-2 p-sm-2 px-2 px-sm-3 rounded-pill text-gray text-decoration-none">
+                    <div class="d-inline-flex align-items-center gap-2 px-1">
+                        <img src="assets/icon-blue-outline-location-pin.png" alt="Location pin">
+                        <h5 class="fw-medium mb-0">Lorem Ipsum</h5>
+                    </div>
+                </a>
+
+                <a href="#"
+                    class="tag-play d-flex bg-white p-2 p-sm-2 px-2 px-sm-3 rounded-pill text-gray text-decoration-none">
+                    <div class="d-inline-flex align-items-center gap-2 px-1">
+                        <img src="assets/icon-oranange-circle-play.png" alt="Play">
+                        <h5 class="fw-medium mb-0">Play Demo</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- plans section -->
+    <section class="container mt-5">
+        <div class="row gy-3">
+            <div>
+                <div class="row gy-2 text-center justify-content-center">
+                    <h1 class="heading-2 mb-0">Best Morocco eSIM data plans</h1>
+                    <p class="body-text-1 mx-w-1011">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s
+                    </p>
+                </div>
+            </div>
+
+            <!-- <div id="plans-slider-wrapper" class="overflow-hidden py-3">
+                <div id="plans-slider-track" class="plans-slider-track row flex-nowrap gx-3 gx-md-4">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-1.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 1</h4>
+                            <p class="body-text-1 text-light-gray">1GB total in 7 days</p>
+                            <h4 class="fw-bold">$8.90</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-2.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 2</h4>
+                            <p class="body-text-1 text-light-gray">2GB total in 15 days</p>
+                            <h4 class="fw-bold">$16.50</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-3.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 3</h4>
+                            <p class="body-text-1 text-light-gray">3GB-5GB total</p>
+                            <h4 class="fw-bold">$22.50 – $34.90</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-1.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 4</h4>
+                            <p class="body-text-1 text-light-gray">1GB total in 7 days</p>
+                            <h4 class="fw-bold">$8.90</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-2.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 5</h4>
+                            <p class="body-text-1 text-light-gray">2GB total in 15 days</p>
+                            <h4 class="fw-bold">$16.50</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-3.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 6</h4>
+                            <p class="body-text-1 text-light-gray">3GB-5GB total</p>
+                            <h4 class="fw-bold">$22.50 – $34.90</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-1.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 7</h4>
+                            <p class="body-text-1 text-light-gray">1GB total in 7 days</p>
+                            <h4 class="fw-bold">$8.90</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-2.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 8</h4>
+                            <p class="body-text-1 text-light-gray">2GB total in 15 days</p>
+                            <h4 class="fw-bold">$16.50</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-3.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 9</h4>
+                            <p class="body-text-1 text-light-gray">3GB-5GB total</p>
+                            <h4 class="fw-bold">$22.50 – $34.90</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div id="plans-slider-wrapper" class="swap-slider-wrapper overflow-hidden py-3">
+                <div id="plans-slider-track" class="swap-slider-track plans-slider-track row flex-nowrap gx-3 gx-md-4">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-1.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 1</h4>
+                            <p class="body-text-1 text-light-gray">1GB total in 7 days</p>
+                            <h4 class="fw-bold">$8.90</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-2.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 2</h4>
+                            <p class="body-text-1 text-light-gray">2GB total in 15 days</p>
+                            <h4 class="fw-bold">$16.50</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-3.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 3</h4>
+                            <p class="body-text-1 text-light-gray">3GB-5GB total</p>
+                            <h4 class="fw-bold">$22.50 – $34.90</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-1.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 4</h4>
+                            <p class="body-text-1 text-light-gray">1GB total in 7 days</p>
+                            <h4 class="fw-bold">$8.90</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-2.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 5</h4>
+                            <p class="body-text-1 text-light-gray">2GB total in 15 days</p>
+                            <h4 class="fw-bold">$16.50</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-3.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 6</h4>
+                            <p class="body-text-1 text-light-gray">3GB-5GB total</p>
+                            <h4 class="fw-bold">$22.50 – $34.90</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-1.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 7</h4>
+                            <p class="body-text-1 text-light-gray">1GB total in 7 days</p>
+                            <h4 class="fw-bold">$8.90</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-2.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 8</h4>
+                            <p class="body-text-1 text-light-gray">2GB total in 15 days</p>
+                            <h4 class="fw-bold">$16.50</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="bg-white d-flex flex-column gap-2 border-blue rounded-30 p-3">
+                            <img class="mb-3" src="assets/plan-sec-img-3.png" alt="data plan 1">
+                            <h4 class="fw-bold">Lorem Ipsum 9</h4>
+                            <p class="body-text-1 text-light-gray">3GB-5GB total</p>
+                            <h4 class="fw-bold">$22.50 – $34.90</h4>
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                                <div class="py-1 body-text-1">Buy Now</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits section -->
+    <section class="bg-light-blue-1 mt-5 py-4">
+        <div class="container">
+            <div class="row gy-3">
+                <div>
+                    <div class="row gy-2 text-center justify-content-center">
+                        <h1 class="heading-2 mb-0">
+                            How <span class="long-word">Moroccoesim.com</span> Benefits You
+                        </h1>
+                        <p class="body-text-1 mx-w-1011">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been
+                            the industry's standard dummy text ever since the 1500s
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-10 col-md-6">
+                            <img class="w-100" src="assets/benefits-sec-img.png" alt="These People benefited">
+                        </div>
+                        <div class="col-md-6 pt-4 pt-sm-5 ps-md-4">
+                            <div class="benifits d-flex flex-column pb-2 pt-lg-4 pt-xl-5">
+                                <div class="d-flex gap-3">
+                                    <img src="assets/benifits-sec-benifit-1.png" alt="Benifit 1">
+                                    <div>
+                                        <h5 class="fw-bold ms-1 mb-0">It is digital</h5>
+                                        <p class="body-text-1 mb-lg-4">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex gap-3">
+                                    <img src="assets/benifits-sec-benifit-2.png" alt="Benifit 2">
+                                    <div>
+                                        <h5 class="fw-bold ms-1 mb-0">Instant Delivery</h5>
+                                        <p class="body-text-1 mb-lg-4">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex gap-3">
+                                    <img src="assets/benifits-sec-benifit-3.png" alt="Benifit 3">
+                                    <div>
+                                        <h5 class="fw-bold ms-1 mb-0">Easy Activation</h5>
+                                        <p class="body-text-1 mb-lg-4">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex gap-3 align-items-start">
+                                    <img src="assets/benifits-sec-benifit-4.png" alt="Benifit 4">
+                                    <div>
+                                        <h5 class="fw-bold ms-1 mb-0">Save Roaming Fees</h5>
+                                        <p class="body-text-1 mb-lg-4">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-4">
+                                <div class="p-1 px-3 body-text-1">Contact Us</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- device compat - device compatibility section -->
+    <!-- <section class="device-compat-section container mt-5">
+        <div class="row gy-3">
+            <div>
+                <div class="row gy-2 text-center justify-content-center">
+                    <h1 class="heading-2 mb-0">Check the compatibility of your device</h1>
+                    <p class="body-text-1 mx-w-1011">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                        been
+                        the industry's standard dummy text ever since the 1500s
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="col-7">
+                        <div class="row">
+                            <div class="d-flex justify-content-start">
+                                <div class="tabs-base bg-linearg-blue p-3 px-5 rounded-pill">
+                                    <div class="tab-track d-flex align-items-center mx-3 px-4 z-1 gap-4 position-relative">
+                                        <div class="active-pill bg-light-blue rounded-pill position-absolute z-n1">
+                                        </div>
+
+                                        <button
+                                            class="btn active rounded-pill py-2 px-2 body-text-1 text-white fw-medium">Apple</button>
+                                        <button
+                                            class="btn rounded-pill py-2 px-2 body-text-1 text-white fw-medium">Samsung</button>
+                                        <button
+                                            class="btn rounded-pill py-2 px-2 body-text-1 text-white fw-medium">Google
+                                            Pixel</button>
+                                        <button
+                                            class="btn rounded-pill py-2 px-2 body-text-1 text-white fw-medium">Others</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row">
+                                    <div class="col-6"></div>
+                                    <div class="col-6"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- device compat - device compatibility section -->
+    <section class="device-compat-section container mt-5">
+        <div class="row gy-4">
+            <div>
+                <div class="row gy-2 text-center justify-content-center">
+                    <h1 class="heading-2 mb-0">Check the compatibility of your device</h1>
+                    <p class="body-text-1 mx-w-1011">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                        been the industry's standard dummy text ever since the 1500s
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-7">
+                        <!-- Custom tab buttons styled as pills -->
+                        <div class="tabs-base bg-linearg-blue px-3 px-sm-5 rounded-pill d-md-inline-block">
+                            <div id="device-compat-tab-wrapper" class="py-3 overflow-hidden position-relative">
+
+                                <div id="device-compat-tab-track"
+                                    class="nav nav-tabs tab-track d-flex align-items-center mx-3 px-4 z-1 gap-3 gap-sm-4 position-relative border-0 flex-nowrap text-nowrap"
+                                    id="deviceTab" role="tablist">
+                                    <div class="active-pill bg-light-blue rounded-pill position-absolute z-n1"></div>
+
+                                    <button
+                                        class="nav-link active rounded-pill py-2 px-2 body-text-1 text-white fw-medium"
+                                        id="apple-tab" data-bs-toggle="tab" data-bs-target="#apple" type="button"
+                                        role="tab" aria-controls="apple" aria-selected="true">Apple</button>
+
+                                    <button class="nav-link rounded-pill py-2 px-2 body-text-1 text-white fw-medium"
+                                        id="samsung-tab" data-bs-toggle="tab" data-bs-target="#samsung" type="button"
+                                        role="tab" aria-controls="samsung" aria-selected="false">Samsung</button>
+
+                                    <button class="nav-link rounded-pill py-2 px-2 body-text-1 text-white fw-medium"
+                                        id="pixel-tab" data-bs-toggle="tab" data-bs-target="#pixel" type="button"
+                                        role="tab" aria-controls="pixel" aria-selected="false">Google Pixel</button>
+
+                                    <button class="nav-link rounded-pill py-2 px-2 body-text-1 text-white fw-medium"
+                                        id="others-tab" data-bs-toggle="tab" data-bs-target="#others" type="button"
+                                        role="tab" aria-controls="others" aria-selected="false">Others</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Tab content -->
+                        <div class="tab-content mt-4" id="deviceTabContent">
+                            <div class="tab-pane fade show active" id="apple" role="tabpanel"
+                                aria-labelledby="apple-tab">
+                                <div class=" body-text-1 d-flex gap-1 flex-column">
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    iPhone 16, 16 Plus, 16 Pro, 16 Pro Max
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    iPhone SE (2020, 2022)
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    iPhone 15, 15 Plus, 15 Pro, 15 Pro Max
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    iPad Pro 11-inch (1st, 2nd and 3rd generation)
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    iPhone 14, 14 Plus, 14 Pro, 14 Pro Max
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    iPad Pro 12.9-inch (3rd, 4th, 5th and 6th generation)
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    iPhone 13, 13 Mini, 13 Pro, 13 Pro Max, SE 3 (2022)
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    iPad Mini (5th and 6th generation)
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    iPhone 12, 12 Mini, 12 Pro, 12 Pro Max
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Apple watch series 3, 4, 5 and 6
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    iPhone 11, 11 Pro, 11 Pro Max
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Apple watch SE
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    iPhone XS, XS Max, XR
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="samsung" role="tabpanel" aria-labelledby="samsung-tab">
+                                <div class=" body-text-1 d-flex gap-1 flex-column">
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Galaxy S25, S25+, S25 Ultra, S25 FE
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Galaxy Note 20, 20+, 20 Ultra
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Galaxy S24, S24+, S24 Ultra, S24 FE
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Galaxy A54*, A55 5G, A35
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Galaxy S23, S23+, S23 Ultra, S23 FE*
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Galaxy Watch
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Galaxy S22, S22+ 5G, S22 Ultra 5G
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Galaxy S21, S21+ 5G, S21 Ultra 5G
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Galaxy S20, S20+, S20 Ultra
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Galaxy Z Flip series
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pixel" role="tabpanel" aria-labelledby="pixel-tab">
+                                <div class=" body-text-1 d-flex gap-1 flex-column">
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Google Pixel 9, 9 Pro, 9 Pro XL
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Google Pixel 3, 3a XL
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Google Pixel Fold
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Google Pixel 4, 4a, 4 XL
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Google Pixel 8, 8a, 8 Pro
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Google Pixel 7, 7a, 7 Pro
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Google Pixel 6, 6a, 6 Pro
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Google Pixel 6, 6a, 6 Pro
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Google Pixel 3, 3 XL
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="others" role="tabpanel" aria-labelledby="others-tab">
+                                <div class=" body-text-1 d-flex gap-1 flex-column">
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Huawei P40, P40 Pro
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Motorola Razr (2019), Razr 5G
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Huawei Mate 40 pro
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Microsoft Surface Duo
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Huawei Pura 70 Pro
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Nuu Mobile X5
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Oppo Find X3, X3 Pro, X5, X5 Pro, X8, X8 Pro
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Honor Magic 4 Pro, 5 Pro, 6 Pro, 90, X8, 200 Pro, Magic V2, Magic V3
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Oppo Reno 5A, Reno 6 Pro 5G, Reno 9A, Find N3 Flip
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Fairphone 4
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Sony Xperia 10 IV
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                        </div>
+                                    </div>
+                                    <div class="row gx-3">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex gap-3 align-items-baseline">
+                                                    <img src="assets/icon-blue-circle-tick.png" alt="✔">
+                                                    Sony Xperia 10 III Lite
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-n5 mt-lg-0 col-sm-10 col-md-8 col-lg-5">
+                        <img class="w-100" src="assets/device-compat-sec-img.png" alt="Devices for compatibility">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- talk about section -->
+    <section class="talk-about-section container mt-5">
+        <div class="row gy-4">
+            <div>
+                <div class="row gy-2 text-center justify-content-center">
+                    <h1 class="heading-2 mb-0">What people talk about us</h1>
+                    <p class="body-text-1 mx-w-1011">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                        been
+                        the industry's standard dummy text ever since the 1500s
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="swap-slider-wrapper overflow-hidden p-1">
+                    <div class="swap-slider-track row gx-3 gx-sm-4 flex-nowrap body-text-1">
+                        <div class="col-sm-6 col-lg-4">
+                            <div
+                                class="bg-white d-flex flex-column gap-4 align-items-start p-3 p-md-4 box-shadow-gray rounded-30">
+                                <img class="icon-quote" src="assets/icon-blue-quote .png" alt="Talk About">
+                                <p class="mb-0">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum
+                                    has been the industry's standard dummy text ever since
+                                </p>
+                                <div class="d-flex gap-3 align-items-center">
+                                    <img class="client" src="assets/talk-about-client-1.png" alt="client 1">
+                                    <h4 class="fw-bold">Ted Wham</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div
+                                class="bg-white d-flex flex-column gap-4 align-items-start p-3 p-md-4 box-shadow-gray rounded-30">
+                                <img class="icon-quote" src="assets/icon-blue-quote .png" alt="Talk About">
+                                <p class="mb-0">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum
+                                    has been the industry's standard dummy text ever since
+                                </p>
+                                <div class="d-flex gap-3 align-items-center">
+                                    <img class="client" src="assets/talk-about-client-2.png" alt="client 1">
+                                    <h4 class="fw-bold">Ashc</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <div
+                                class="bg-white d-flex flex-column gap-4 align-items-start p-3 p-md-4 box-shadow-gray rounded-30">
+                                <img class="icon-quote" src="assets/icon-blue-quote .png" alt="Talk About">
+                                <p class="mb-0">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum
+                                    has been the industry's standard dummy text ever since
+                                </p>
+                                <div class="d-flex gap-3 align-items-center">
+                                    <img class="client" src="assets/talk-about-client-3.png" alt="client 1">
+                                    <h4 class="fw-bold">Marcin</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- faq section -->
+    <section class="faq-section container mt-5">
+        <div class="row gy-4">
+            <div>
+                <div class="row gy-2 text-center justify-content-center">
+                    <h1 class="heading-2 mb-0">Frequently asked questions</h1>
+                    <p class="body-text-1 mx-w-1011">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                        been
+                        the industry's standard dummy text ever since the 1500s
+                    </p>
+                </div>
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="d-flex flex-column gap-2 gap-sm-3 gap-md-4">
+                        <div
+                            class="faq-item expended bg-light-blue-1 d-flex flex-column rounded-30 px-2 py-3 p-md-4 mb-2">
+
+                            <div
+                                class="question-header d-flex gap-2 gap-sm-4 justify-content-between align-items-center py-2 px-2">
+                                <h4 class="fw-bold mb-0">01</h4>
+                                <div class="d-flex flex-grow-1 justify-content-start">
+                                    <h4 class="question fw-bold mb-0 position-relative">
+                                        My trip isn't 7, 15, or 30 days. What are my eSIM Morocco options?
+                                    </h4>
+                                </div>
+                                <button
+                                    class="toggle-btn bg-white rounded-circle d-flex align-items-center justify-content-center border-0">
+                                    <img class="dash" src="assets/faq-sec-blue-dash.png" width="20" alt="expand">
+                                    <img class="dash" src="assets/faq-sec-blue-dash.png" width="20" alt="">
+                                </button>
+                            </div>
+
+                            <div class="expand-body px-2">
+                                <hr>
+                                <p class="body-text-1 mx-w-1011 mb-0">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-light-blue-1 d-flex flex-column rounded-30 px-2 py-3 p-md-4 mb-2">
+
+                            <div
+                                class="question-header d-flex gap-2 gap-sm-4 justify-content-between align-items-center py-2 px-2">
+                                <h4 class="fw-bold mb-0">02</h4>
+                                <div class="d-flex flex-grow-1 justify-content-start">
+                                    <h4 class="question fw-bold mb-0 position-relative">
+                                        Does an eSIM in Morocco support 5G speeds?
+                                    </h4>
+                                </div>
+                                <button
+                                    class="toggle-btn bg-white rounded-circle d-flex align-items-center justify-content-center border-0">
+                                    <img class="dash" src="assets/faq-sec-blue-dash.png" width="20" alt="expand">
+                                    <img class="dash" src="assets/faq-sec-blue-dash.png" width="20" alt="">
+                                </button>
+                            </div>
+
+                            <div class="expand-body px-2">
+                                <hr>
+                                <p class="body-text-1 mx-w-1011 mb-0">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-light-blue-1 d-flex flex-column rounded-30 px-2 py-3 p-md-4 mb-2">
+
+                            <div
+                                class="question-header d-flex gap-2 gap-sm-4 justify-content-between align-items-center py-2 px-2">
+                                <h4 class="fw-bold mb-0">03</h4>
+                                <div class="d-flex flex-grow-1 justify-content-start">
+                                    <h4 class="question fw-bold mb-0 position-relative">
+                                        Which areas have slower speeds with Morocco eSIM?
+                                    </h4>
+                                </div>
+                                <button
+                                    class="toggle-btn bg-white rounded-circle d-flex align-items-center justify-content-center border-0">
+                                    <img class="dash" src="assets/faq-sec-blue-dash.png" width="20" alt="expand">
+                                    <img class="dash" src="assets/faq-sec-blue-dash.png" width="20" alt="">
+                                </button>
+                            </div>
+
+                            <div class="expand-body px-2">
+                                <hr>
+                                <p class="body-text-1 mx-w-1011 mb-0">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item bg-light-blue-1 d-flex flex-column rounded-30 px-2 py-3 p-md-4 mb-2">
+
+                            <div
+                                class="question-header d-flex gap-2 gap-sm-4 justify-content-between align-items-center py-2 px-2">
+                                <h4 class="fw-bold mb-0">04</h4>
+                                <div class="d-flex flex-grow-1 justify-content-start">
+                                    <h4 class="question fw-bold mb-0 position-relative">
+                                        Can I use my eSIM Morocco in a mobile hotspot (MiFi)?
+                                    </h4>
+                                </div>
+                                <button
+                                    class="toggle-btn bg-white rounded-circle d-flex align-items-center justify-content-center border-0">
+                                    <img class="dash" src="assets/faq-sec-blue-dash.png" width="20" alt="expand">
+                                    <img class="dash" src="assets/faq-sec-blue-dash.png" width="20" alt="">
+                                </button>
+                            </div>
+
+                            <div class="expand-body px-2">
+                                <hr>
+                                <p class="body-text-1 mx-w-1011 mb-0">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- site footer -->
+    <footer class="bg-light-blue-1 mt-5">
+        <div class="container py-5">
+            <div class="row gy-4 mb-4">
+                <div class="col-lg-4 me-auto">
+                    <div class="row gy-3">
+                        <div class="d-flex">
+                            <a href="#">
+                                <h2 class="navbar-brand mb-0 h1 fs-2 fw-bold text-gray">Logo Here</h2>
+                            </a>
+                        </div>
+                        <p class="body-text-1 mb-0">
+                            moroccoesim.com - a local brand of GIGAGO - is the No. 1 Morocco travel eSIM service
+                            company. With a wide variety of eSIM plans, moroccoesim.com offers travelers the simplest
+                            way to stay connected in Morocco at a local rate.
+                        </p>
+                        <a href="tel:+12762888688" class="fw-medium">
+                            Mobile: +1 276-288-8688 (WhatsApp)
+                        </a>
+                        <a href="mailto:hello@moroccoesim.com" class="fw-medium">
+                            Email: hello@moroccoesim.com
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3 col-lg-2">
+                    <nav>
+                        <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                            <li>
+                                <h4 class="fw-bold mb-0">Support</h4>
+                            </li>
+                            <li><a href="#">Compatible devices</a></li>
+                            <li><a href="#">How to install eSIM</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <nav>
+                        <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                            <li>
+                                <h4 class="fw-bold mb-0">Travelers' Guide</h4>
+                            </li>
+                            <li><a href="#">Morocco SIM cards</a></li>
+                            <li><a href="#">Morocco Mobile Operators</a></li>
+                            <li><a href="#">SIM card at Morocco Airports</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-5 col-lg-3">
+                    <nav>
+                        <h4 class="fw-bold mb-3 text-nowrap">GIGAGO Networks</h4>
+                        <div class="d-flex gap-3">
+                            <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                                <li><a href="#">Europe eSIM</a></li>
+                                <li><a href="#">Spain eSIM</a></li>
+                                <li><a href="#">Portugal eSIM</a></li>
+                                <li><a href="#">UK eSIM</a></li>
+                            </ul>
+                            <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                                <li><a href="#">China eSIM</a></li>
+                                <li><a href="#">eSIM Singapore</a></li>
+                                <li><a href="#">eSIM Thailand</a></li>
+                                <li><a href="#">eSIM Vietnam</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="row gy-3 justify-content-between">
+                <div class="col-md-auto d-flex justify-content-between">
+                    <a class="me-md-5" href="#">Terms Of Use</a>
+                    <a class="ms-md-5" href="#">Privacy Policy</a>
+                </div>
+                <div class="col-auto">
+                    <div class="d-flex gap-3 align-items-center">
+                        <!-- <a href="#"><img src="assets/footer-pay-1.png" alt="Visa"></a>
+                        <a href="#"><img src="assets/footer-pay-2.png" alt="Master Card"></a>
+                        <a href="#"><img src="assets/footer-pay-3.png" alt="Pay Pal"></a>
+                        <a href="#"><img src="assets/footer-pay-4.png" alt="AMERECAN EXPRESS"></a>
+                        <a href="#"><img src="assets/footer-pay-5.png" alt="Visa Electron"></a>
+                        <a href="#"><img src="assets/footer-pay-6.png" alt="Maestro"></a> -->
+                        <img class="img-fluid" src="assets/footer-accepted-payments.png"
+                            alt="Visa Master Card Pay Pal AMERECAN EXPRESS Visa Electron Maestro">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-blue text-center p-4">
+            <h4 class="fw-bold">© 2025 GIGAGO</h4>
+        </div>
+    </footer>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="script/script.js"></script>
+    <script src="script/swap-slider.js"></script>
+
+    <!-- <script src="script/plans-slider.js"></script> -->
+    <script src="script/device-compat-sec.js"></script>
 </body>
 
 </html>
+
+<!--   -->
