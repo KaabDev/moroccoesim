@@ -90,15 +90,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // device compat section set most bigger height of tab pane to tab content for prevent from layout shifting
+
 document.addEventListener("DOMContentLoaded", function () {
   const tabContent = document.getElementById("deviceTabContent");
 
   function setMaxHeight() {
+    // Only run on desktop (width > 991px)
+    if (window.innerWidth <= 991) {
+      // Reset minHeight on smaller screens
+      tabContent.style.minHeight = "";
+      return;
+    }
+
     let maxHeight = 0;
     const panes = tabContent.querySelectorAll(".tab-pane");
 
     panes.forEach(pane => {
-      // Temporarily show hidden pane to measure its height
       const wasHidden = !pane.classList.contains("show");
       if (wasHidden) {
         pane.classList.add("show", "active");
@@ -109,7 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
         maxHeight = height;
       }
 
-      // Restore previous hidden state
       if (wasHidden) {
         pane.classList.remove("show", "active");
       }
@@ -124,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Run on window resize
   window.addEventListener("resize", setMaxHeight);
 });
+
 
 // enable tabs scroll when tabs overflow from parent
 document.addEventListener("DOMContentLoaded", function () {

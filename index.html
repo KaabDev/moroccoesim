@@ -21,7 +21,7 @@
 <body>
 
     <!-- header + navbar -->
-    <header>
+    <header id="header" class="static-header">
         <nav class="navbar navbar-expand-lg py-4">
             <div class="container justify-content-between">
 
@@ -102,6 +102,87 @@
         </nav>
     </header>
 
+    <!-- Offcanvas Mobile Menu (collapse dropdowns) -->
+    <!-- <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">
+                <a class="navbar-brand" href="#">
+                    <h2 class="navbar-brand mb-0 h1 fs-2 fw-bold text-gray">Logo Here</h2>
+                </a>
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body d-flex flex-column justify-content-between">
+            <ul class="nav flex-column">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+
+                Collapse dropdown--
+                <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#esimDropdown" role="button"
+                        aria-expanded="false" aria-controls="esimDropdown">
+                        Esim Plans
+                    </a>
+                    <div class="dropdown collapse ps-3 pt-1" id="esimDropdown">
+                        <ul class="nav flex-column gap-2">
+                            <li><a class="nav-link" href="#">Tourist eSIM - 7 Days</a></li>
+                            <li><a class="nav-link" href="#">Traveler eSIM - 15 Days</a></li>
+                            <li><a class="nav-link" href="#">Long Stay eSIM - 30 Days</a></li>
+                            <li><a class="nav-link" href="#">Unlimited Data eSIM</a></li>
+                            <li><a class="nav-link" href="#">eSIM for Europe & Morocco</a></li>
+                            <li><a class="nav-link" href="#">Regional eSIM (North Africa)</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#getStartedDropdown"
+                        role="button" aria-expanded="false" aria-controls="getStartedDropdown">
+                        Get Started
+                    </a>
+                    <div class="dropdown collapse ps-3 pt-1" id="getStartedDropdown">
+                        <ul class="nav flex-column gap-2">
+                            <li><a class="nav-link" href="#">How eSIM Works</a></li>
+                            <li><a class="nav-link" href="#">Check Device Compatibility</a></li>
+                            <li><a class="nav-link" href="#">Scan QR Code</a></li>
+                            <li><a class="nav-link" href="#">Activate Your Plan</a></li>
+                            <li><a class="nav-link" href="#">FAQs</a></li>
+                            <li><a class="nav-link" href="#">Download Setup Guide</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#aboutDropdown" role="button"
+                        aria-expanded="false" aria-controls="aboutDropdown">
+                        About Us
+                    </a>
+                    <div class="dropdown collapse ps-3 pt-1" id="aboutDropdown">
+                        <ul class="nav flex-column gap-2">
+                            <li><a class="nav-link" href="#">Our Mission</a></li>
+                            <li><a class="nav-link" href="#">Why Choose Us</a></li>
+                            <li><a class="nav-link" href="#">Meet the Team</a></li>
+                            <li><a class="nav-link" href="#">Customer Reviews</a></li>
+                            <li><a class="nav-link" href="#">Press & Media</a></li>
+                            <li><a class="nav-link" href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+
+            <div class="d-flex d-md-none align-items-center justify-content-between flex-wrap mt-4">
+                <a class="nav-link p-2" href="#">Log In</a>
+                <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
+                    <div class="py-1">Sign Up</div>
+                </a>
+            </div>
+        </div>
+    </div> -->
+
     <!-- Offcanvas Mobile Menu -->
     <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasMenuLabel">
         <div class="offcanvas-header">
@@ -112,57 +193,69 @@
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
+
         <div class="offcanvas-body d-flex flex-column justify-content-between">
-            <ul class="nav flex-column">
+            <!-- Accordion Parent -->
+            <ul class="nav flex-column" id="menuAccordion">
+
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Home</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#esimDropdown" role="button"
+                        aria-expanded="false" aria-controls="esimDropdown">
                         Esim Plans
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Tourist eSIM - 7 Days</a></li>
-                        <li><a class="dropdown-item" href="#">Traveler eSIM - 15 Days</a></li>
-                        <li><a class="dropdown-item" href="#">Long Stay eSIM - 30 Days</a></li>
-                        <li><a class="dropdown-item" href="#">Unlimited Data eSIM</a></li>
-                        <li><a class="dropdown-item" href="#">eSIM for Europe & Morocco</a></li>
-                        <li><a class="dropdown-item" href="#">Regional eSIM (North Africa)</a></li>
-                    </ul>
+                    <div class="dropdown collapse ps-3 pt-1" id="esimDropdown" data-bs-parent="#menuAccordion">
+                        <ul class="nav flex-column gap-2">
+                            <li><a class="nav-link" href="#">Tourist eSIM - 7 Days</a></li>
+                            <li><a class="nav-link" href="#">Traveler eSIM - 15 Days</a></li>
+                            <li><a class="nav-link" href="#">Long Stay eSIM - 30 Days</a></li>
+                            <li><a class="nav-link" href="#">Unlimited Data eSIM</a></li>
+                            <li><a class="nav-link" href="#">eSIM for Europe & Morocco</a></li>
+                            <li><a class="nav-link" href="#">Regional eSIM (North Africa)</a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#getStartedDropdown"
+                        role="button" aria-expanded="false" aria-controls="getStartedDropdown">
                         Get Started
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">How eSIM Works</a></li>
-                        <li><a class="dropdown-item" href="#">Check Device Compatibility</a></li>
-                        <li><a class="dropdown-item" href="#">Scan QR Code</a></li>
-                        <li><a class="dropdown-item" href="#">Activate Your Plan</a></li>
-                        <li><a class="dropdown-item" href="#">FAQs</a></li>
-                        <li><a class="dropdown-item" href="#">Download Setup Guide</a></li>
-                    </ul>
+                    <div class="dropdown collapse ps-3 pt-1" id="getStartedDropdown" data-bs-parent="#menuAccordion">
+                        <ul class="nav flex-column gap-2">
+                            <li><a class="nav-link" href="#">How eSIM Works</a></li>
+                            <li><a class="nav-link" href="#">Check Device Compatibility</a></li>
+                            <li><a class="nav-link" href="#">Scan QR Code</a></li>
+                            <li><a class="nav-link" href="#">Activate Your Plan</a></li>
+                            <li><a class="nav-link" href="#">FAQs</a></li>
+                            <li><a class="nav-link" href="#">Download Setup Guide</a></li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+
+                <li class="nav-item">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#aboutDropdown" role="button"
+                        aria-expanded="false" aria-controls="aboutDropdown">
                         About Us
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Our Mission</a></li>
-                        <li><a class="dropdown-item" href="#">Why Choose Us</a></li>
-                        <li><a class="dropdown-item" href="#">Meet the Team</a></li>
-                        <li><a class="dropdown-item" href="#">Customer Reviews</a></li>
-                        <li><a class="dropdown-item" href="#">Press & Media</a></li>
-                        <li><a class="dropdown-item" href="#">Contact Us</a></li>
-                    </ul>
+                    <div class="dropdown collapse ps-3 pt-1" id="aboutDropdown" data-bs-parent="#menuAccordion">
+                        <ul class="nav flex-column gap-2">
+                            <li><a class="nav-link" href="#">Our Mission</a></li>
+                            <li><a class="nav-link" href="#">Why Choose Us</a></li>
+                            <li><a class="nav-link" href="#">Meet the Team</a></li>
+                            <li><a class="nav-link" href="#">Customer Reviews</a></li>
+                            <li><a class="nav-link" href="#">Press & Media</a></li>
+                            <li><a class="nav-link" href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
-            <div class="d-flex d-md-none align-items-center justify-content-between flex-wrap">
-                <a class="nav-link p-2" href="#">Log In</a>
 
+            <div class="d-flex d-md-none align-items-center justify-content-between flex-wrap mt-4">
+                <a class="nav-link p-2" href="#">Log In</a>
                 <a href="#" class="btn theme-btn-primary rounded-pill text-white p-2 px-5">
                     <div class="py-1">Sign Up</div>
                 </a>
@@ -171,7 +264,7 @@
     </div>
 
     <!-- hero section -->
-    <section class="hero-section container py-5 py-lg-4">
+    <section id="hero" class="hero-section container py-5 py-lg-4">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-5">
                 <div class="row gy-3">
@@ -1081,7 +1174,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-n5 mt-lg-0 col-sm-10 col-md-8 col-lg-5">
+                    <div class="mt-4 mt-lg-0 col-sm-10 col-md-8 col-lg-5">
                         <img class="w-100" src="assets/device-compat-sec-img.png" alt="Devices for compatibility">
                     </div>
                 </div>
@@ -1179,11 +1272,11 @@
 
                             <div
                                 class="question-header d-flex gap-2 gap-sm-4 justify-content-between align-items-center py-2 px-2">
-                                <h4 class="fw-bold mb-0">01</h4>
+                                <h5 class="fw-bold mb-0">01</h5>
                                 <div class="d-flex flex-grow-1 justify-content-start">
-                                    <h4 class="question fw-bold mb-0 position-relative">
+                                    <h5 class="question fw-bold mb-0 position-relative">
                                         My trip isn't 7, 15, or 30 days. What are my eSIM Morocco options?
-                                    </h4>
+                                    </h5>
                                 </div>
                                 <button
                                     class="toggle-btn bg-white rounded-circle d-flex align-items-center justify-content-center border-0">
@@ -1204,11 +1297,11 @@
 
                             <div
                                 class="question-header d-flex gap-2 gap-sm-4 justify-content-between align-items-center py-2 px-2">
-                                <h4 class="fw-bold mb-0">02</h4>
+                                <h5 class="fw-bold mb-0">02</h5>
                                 <div class="d-flex flex-grow-1 justify-content-start">
-                                    <h4 class="question fw-bold mb-0 position-relative">
+                                    <h5 class="question fw-bold mb-0 position-relative">
                                         Does an eSIM in Morocco support 5G speeds?
-                                    </h4>
+                                    </h5>
                                 </div>
                                 <button
                                     class="toggle-btn bg-white rounded-circle d-flex align-items-center justify-content-center border-0">
@@ -1229,11 +1322,11 @@
 
                             <div
                                 class="question-header d-flex gap-2 gap-sm-4 justify-content-between align-items-center py-2 px-2">
-                                <h4 class="fw-bold mb-0">03</h4>
+                                <h5 class="fw-bold mb-0">03</h5>
                                 <div class="d-flex flex-grow-1 justify-content-start">
-                                    <h4 class="question fw-bold mb-0 position-relative">
+                                    <h5 class="question fw-bold mb-0 position-relative">
                                         Which areas have slower speeds with Morocco eSIM?
-                                    </h4>
+                                    </h5>
                                 </div>
                                 <button
                                     class="toggle-btn bg-white rounded-circle d-flex align-items-center justify-content-center border-0">
@@ -1254,11 +1347,11 @@
 
                             <div
                                 class="question-header d-flex gap-2 gap-sm-4 justify-content-between align-items-center py-2 px-2">
-                                <h4 class="fw-bold mb-0">04</h4>
+                                <h5 class="fw-bold mb-0">04</h5>
                                 <div class="d-flex flex-grow-1 justify-content-start">
-                                    <h4 class="question fw-bold mb-0 position-relative">
+                                    <h5 class="question fw-bold mb-0 position-relative">
                                         Can I use my eSIM Morocco in a mobile hotspot (MiFi)?
-                                    </h4>
+                                    </h5>
                                 </div>
                                 <button
                                     class="toggle-btn bg-white rounded-circle d-flex align-items-center justify-content-center border-0">

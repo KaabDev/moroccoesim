@@ -1,5 +1,4 @@
 // Function for line below navitems for hover and active
-
 // document.addEventListener("DOMContentLoaded", function () {
 //   const navItems = document.querySelectorAll("#main-nav .nav-item");
 //   const underline = document.querySelector("#main-nav .underline");
@@ -48,7 +47,6 @@
 //     if (activeItem) updateUnderline(activeItem);
 //   });
 // });
-
 document.addEventListener("DOMContentLoaded", function () {
     const navItems = document.querySelectorAll("#main-nav .nav-item");
     const activeLine = document.querySelector("#main-nav .active-line");
@@ -119,6 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
 // talk about section swap slider card highlight at center and Recenter After Hover Ends
 const updateActiveCard = () => {
     const wrapper = document.querySelector('.talk-about-section .swap-slider-wrapper');
@@ -148,7 +147,6 @@ const updateActiveCard = () => {
         closestCard.classList.add('card-active');
     }
 };
-
 document.addEventListener('DOMContentLoaded', () => {
     const wrapper = document.querySelector('.talk-about-section .swap-slider-wrapper');
     const track = wrapper.querySelector('.swap-slider-track');
@@ -172,6 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
 // faq section accordion collapse and expend class changing on toggler
 document.querySelectorAll('.faq-item').forEach(faqItem => {
     faqItem.addEventListener('click', (event) => {
@@ -193,3 +192,73 @@ document.querySelectorAll('.faq-item').forEach(faqItem => {
     });
 });
 
+
+// Only enable hover toggling of dropdowns on devices that support hover (e.g., desktops)
+if (window.matchMedia('(hover: hover)').matches) {
+    document.addEventListener('DOMContentLoaded', function () {
+        const dropdowns = document.querySelectorAll('.navbar .dropdown');
+
+        dropdowns.forEach(dropdown => {
+            const toggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
+
+            dropdown.addEventListener('mouseenter', function () {
+                const dropdownInstance = bootstrap.Dropdown.getOrCreateInstance(toggle);
+                dropdownInstance.show();
+            });
+
+            dropdown.addEventListener('mouseleave', function () {
+                const dropdownInstance = bootstrap.Dropdown.getOrCreateInstance(toggle);
+                dropdownInstance.hide();
+            });
+        });
+    });
+}
+
+
+// smart sticky header - static header, hide on scroll down and visible on scroll up 
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.getElementById("header");
+    const hero = document.getElementById("hero");
+    const heroHeight = hero.offsetHeight;
+
+    const heroStyle = window.getComputedStyle(hero);
+    const currentPaddingTop = parseFloat(heroStyle.paddingTop) || 0;
+    const headerHeight = header.offsetHeight;
+
+    hero.style.setProperty("padding-top", (currentPaddingTop + headerHeight) + "px", "important");
+
+    let lastScrollY = window.scrollY;
+    let isSticky = false;
+
+    window.addEventListener("scroll", function () {
+        const currentScroll = window.scrollY;
+
+        if (currentScroll > heroHeight) {
+            if (!isSticky) {
+                header.classList.remove("static-header");
+                header.classList.add("fixed-top", "sticky-header");
+                isSticky = true;
+            }
+
+            if (currentScroll < lastScrollY) {
+                header.classList.add("show");
+            } else {
+                header.classList.remove("show");
+            }
+        } else if (currentScroll < heroHeight) {
+            if (isSticky) {
+                header.classList.remove("show");
+
+                setTimeout(() => {
+                    if (window.scrollY < heroHeight) {
+                        header.classList.remove("sticky-header", "fixed-top");
+                        header.classList.add("static-header");
+                        isSticky = false;
+                    }
+                }, 300); // match your CSS transition duration
+            }
+        }
+
+        lastScrollY = currentScroll;
+    });
+});
